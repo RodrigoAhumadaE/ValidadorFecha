@@ -1,0 +1,106 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: Roboto;
+  background-color: #252525;
+  color: white;
+}
+
+.contenedor{
+  max-width: 1920px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.card{
+  width: 80%;
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  background-color: #454545;
+  padding: 30px;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+.card form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item{
+  display: flex;
+}
+
+.item label{
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.item input, .item select{
+  flex: 2;
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: #858585;
+  border: none;
+  color: white;
+}
+
+.item span{
+  flex: 1;
+  font-size: 0.8em;
+}
+
+.item textarea{
+  width: 75%;
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-color: #858585;
+  border: none;
+  color: white;
+}
+
+.texto{
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.boton {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.boton button{
+  border: none;
+  background-color: #b5b5b5;
+  padding: 8px 30px;
+  border-radius: 15px;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.boton button:hover{
+  background-color: #757575;
+}
+
+.titulo{
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.result{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.result span{
+  flex: 1;
+}

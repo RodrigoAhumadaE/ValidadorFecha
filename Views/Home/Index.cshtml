@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Survey
+<div class="contenedor">
+    <div class="card">
+        <form method="POST" asp-controller="Home" asp-action="Submission">
+            <div class="item">
+                <label asp-for="Nombre">Tu Nombre: </label>
+                <input asp-for="Nombre" id="Nombre">
+                <span asp-validation-for="Nombre"></span>
+            </div>
+            <div class="item">
+                <label asp-for="FechaNacimiento">Fecha de Nacimiento: </label>
+                <input asp-for="FechaNacimiento" type="date" id="FechaNacimiento">
+                <span asp-validation-for="FechaNacimiento"></span>
+            </div>
+            <div class="item">
+                <label asp-for="Locacion">Locación Dojo: </label>
+                <select asp-for="Locacion" id="locacion">
+                    <option disabled selected>Elija una Locación</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Oakland">Oakland</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Dallas">Dallas</option>
+                    <option value="Tulsa">Tulsa</option>
+                    <option value="Chicago">Chicago</option>
+                </select>
+                <span asp-validation-for="Locacion"></span>
+            </div>
+            <div class="item">
+                <label asp-for="Lenguaje">Lenguaje Favorito: </label>
+                <select asp-for="Lenguaje" id="lenguaje">
+                    <option disabled selected>Elija un Lenguaje</option>
+                    <option value="C#">C#</option>
+                    <option value="Java">Java</option>
+                    <option value="C++">C++</option>
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                </select>
+                <span asp-validation-for="Lenguaje"></span>
+            </div>
+            <div class="item texto">
+                <label asp-for="Comentario">Comentario <em>(opcional):</em></label>
+                <textarea asp-for="Comentario" id="comentario" rows="5"></textarea>
+                <span asp-validation-for="Comentario"></span>
+            </div>
+            <div class="item boton">
+                <button>Enviar</button>
+            </div>
+        </form>
+    </div>
+</div>

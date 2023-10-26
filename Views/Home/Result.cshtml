@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Result";
+}
+@model Survey
+<div>
+    <div class="card">
+        <h2 class="titulo">Información Enviada</h2>              
+        <div class="item result">
+            <span>Nombre: </span>
+            <span>@Model.Nombre</span>
+        </div>
+        <div class="item result">
+            <span>Fecha de Nacimiento: </span>
+            <span>@Model.Fecha</span>
+        </div>
+        <div class="item result">
+            <span>Locación Dojo: </span>
+            <span>@Model.Locacion</span>
+        </div>
+        <div class="item result">
+            <span>Lenguaje Favorito: </span>
+            <span>@Model.Lenguaje</span>
+        </div>
+        <div class="item result">
+            <span>Comentario: </span>
+            @if(@Model.Comentario == null){
+                <span>Sin Comentarios</span>
+            }else{
+               <span>@Model.Comentario</span> 
+            }            
+        </div>      
+        <form method="GET" asp-controller="Home" asp-action="Index">
+            <div class="item boton">    
+                <button>Volver</button>                  
+            </div>
+        </form>
+    </div>
+</div>
